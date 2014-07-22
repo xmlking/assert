@@ -75,6 +75,10 @@ function prettyPrint(value) {
 
 function isType(value, T, errors) {
 
+ if (typeof value === 'undefined') {
+    return true; 
+  }
+  
   if (T === primitives.void) {
     return typeof value === 'undefined';
   }
